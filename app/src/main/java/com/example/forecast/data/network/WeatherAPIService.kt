@@ -1,7 +1,6 @@
 package com.example.forecast.data.network
 
 //import com.example.forecast.data.db.Entity.CurrentWeatherResponse
-import com.example.forecast.data.db.Entity.futureWeather.FutureWeatherEntry
 import com.example.forecast.data.network.response.currentWeather.CurrentWeatherResponse
 import com.example.forecast.data.network.response.futureWeather.FutureWeatherResponse
 import retrofit2.http.GET

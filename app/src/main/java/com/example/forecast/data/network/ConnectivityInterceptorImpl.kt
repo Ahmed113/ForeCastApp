@@ -4,8 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import android.util.Log
-import com.example.forecast.NoConnectivityException
+import com.example.forecast.internal.NoConnectivityException
 import okhttp3.Interceptor
 import okhttp3.Response
 //import okhttp3.internal.closeQuietly
@@ -24,7 +23,7 @@ class ConnectivityInterceptorImpl(context: Context) : ConnectivityInterceptor {
         return chain.proceed(builder.build())
     }
 
-    fun isOnline(): Boolean {
+    private fun isOnline(): Boolean {
         var result = false
         val connectivityManager =
             appContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

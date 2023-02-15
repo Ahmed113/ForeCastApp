@@ -7,18 +7,14 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
 import android.util.Log
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-//import com.example.forecast.InvalidLocation
-import com.example.forecast.LocationPermissionGrantedException
-import com.example.forecast.data.db.Entity.WeatherLocation
-//import com.example.forecast.data.db.Entity.currentWeather.WeatherLocation
-//import com.example.forecast.data.db.Entity.WeatherLocation
+import com.example.forecast.internal.LocationPermissionGrantedException
+import com.example.forecast.data.db.entity.WeatherLocation
 import com.example.forecast.internal.asDeferred
 import com.google.android.gms.location.FusedLocationProviderClient
 import kotlinx.coroutines.Deferred
-import org.threeten.bp.ZoneId
 import java.util.*
+import kotlin.math.abs
 
 const val DEVICE_LOCATION = "USE_DEVICE_LOCATION"
 const val CUSTOM_LOCATION = "CUSTOM_LOCATION"
@@ -71,8 +67,8 @@ class LocationProviderImpl(
         }
         val deviceLocation = getLastDeviceLocation().await() ?: return false
         val comparisonThreshold = 0.03
-        return Math.abs(deviceLocation.latitude - lastLocation.latitude) > comparisonThreshold &&
-                Math.abs(deviceLocation.longitude - lastLocation.longitude) > comparisonThreshold
+        return abs(deviceLocation.latitude - lastLocation.latitude) > comparisonThreshold &&
+                abs(deviceLocation.longitude - lastLocation.longitude) > comparisonThreshold
     }
 
     private fun hasCustomLocationChanged(lastLocation: WeatherLocation): Boolean {

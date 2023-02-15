@@ -1,7 +1,6 @@
 package com.example.forecast.data.network.response.futureWeather
 
-import androidx.room.Embedded
-import com.example.forecast.data.db.Entity.futureWeather.FutureWeatherEntry
+import com.example.forecast.data.db.entity.futureWeather.FutureWeatherEntry
 import com.google.gson.annotations.SerializedName
 
 

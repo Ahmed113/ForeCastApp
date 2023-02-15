@@ -12,6 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 //https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london/today?unitGroup=metric&include=current&key=6GA5TMVFLE6ZKU4SEER4Q2HL4&contentType=json
 //https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london/next7days?unitGroup=metric&include=current&key=6GA5TMVFLE6ZKU4SEER4Q2HL4&contentType=json
+const val ICONURL =
+    "https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/3rd%20Set%20-%20Color/"
 
 object WeatherAPIClient {
     private const val Base_Url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"

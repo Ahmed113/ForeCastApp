@@ -5,16 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.forecast.data.db.Converters.DateConverter
-import com.example.forecast.data.db.DAO.CurrentWeatherDAO
-import com.example.forecast.data.db.DAO.FutureWeatherDAO
-import com.example.forecast.data.db.DAO.WeatherLocationDAO
-import com.example.forecast.data.db.Entity.WeatherLocation
+import com.example.forecast.data.db.converters.DateConverter
+import com.example.forecast.data.db.dao.CurrentWeatherDAO
+import com.example.forecast.data.db.dao.FutureWeatherDAO
+import com.example.forecast.data.db.dao.WeatherLocationDAO
+import com.example.forecast.data.db.entity.WeatherLocation
 //import com.example.forecast.data.db.Entity.CurrentWeatherEntry
 //import com.example.forecast.data.db.Entity.CurrentWeatherResponse
 //import com.example.forecast.data.db.Entity.WeatherLocation
-import com.example.forecast.data.db.Entity.currentWeather.CurrentWeatherEntry
-import com.example.forecast.data.db.Entity.futureWeather.FutureWeatherEntry
+import com.example.forecast.data.db.entity.currentWeather.CurrentWeatherEntry
+import com.example.forecast.data.db.entity.futureWeather.FutureWeatherEntry
 
 //import com.example.forecast.data.db.Entity.currentWeather.WeatherLocation
 

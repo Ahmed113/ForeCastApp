@@ -4,8 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.example.forecast.NoConnectivityException
-import com.example.forecast.data.db.Entity.futureWeather.FutureWeatherEntry
+import com.example.forecast.internal.NoConnectivityException
 import com.example.forecast.data.network.response.currentWeather.CurrentWeatherResponse
 import com.example.forecast.data.network.response.futureWeather.FutureWeatherResponse
 

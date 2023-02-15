@@ -3,10 +3,10 @@ package com.example.forecast
 import android.app.Application
 import android.content.Context
 import androidx.preference.PreferenceManager
-import com.example.forecast.UI.Weather.Current.CurrentWeatherVMFactory
-import com.example.forecast.UI.Weather.Future.Details.FutureWeatherDetailsVMFactory
-import com.example.forecast.UI.Weather.Future.List.FutureWeatherVMFactory
-import com.example.forecast.data.Repo.WeatherRepositoryImpl
+import com.example.forecast.ui.weather.current.CurrentWeatherVMFactory
+import com.example.forecast.ui.weather.future.details.FutureWeatherDetailsVMFactory
+import com.example.forecast.ui.weather.future.list.FutureWeatherVMFactory
+import com.example.forecast.data.repository.WeatherRepositoryImpl
 import com.example.forecast.data.network.WeatherAPIClient
 import com.example.forecast.data.network.WeatherAPIService
 import com.example.forecast.data.db.ForecastDB
