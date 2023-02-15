@@ -28,7 +28,7 @@ The Gson library is responsible for converting Json files to our Java classes
 4.`ForecastDB:` here is the Room Database contains three entities `CurrentWeatherEntry`, `FutureWeatherEntry` , `WeatherLocation` where the retrieved data is stored, its DAOs:
   `CurrentWeatherDAO`, `FutureWeatherDAO`,and `WeatherLocationDAO` 
   
-5.`Providers:` is an isolated package in the data layer responsible for providing us with the selected unit and the data from users like their locations or the desired city they entered to process them and retrieve the matched data in the user interface the goal is to make the code clean, readable and make the repository layer cleaner.
+5.`Providers:` is a separate package in the data layer responsible for providing us with the selected unit and the data from users like their locations or the desired city they entered to process them and retrieve the matched data in the user interface the goal is to make the code clean, readable and make the repository layer cleaner, So it is considered as a sub-package for the `Repository`.
 
 6.`Repository:` is an important layer between the Room Database and View Model and responsible for most of the application logic, observes the Live Data "`downloadedCurrentWeather` and `downloadedFutureWeather`" from `Weather network data source` to fetch data if there are changes then store it in `ForecastDB` "by these functions `persistCurrentWeather()`, `persistFutureWeather()`",
 also gets data from `ForecastDB` Depending on user entries then sends it to the view model layer as Live Data through interface `WeatherRepository`, updates database so if there are changes in data, these changes happen from user "Changes like unit system, user location or the desired city" or the last fetching time "If the last fetching time was from 30 minutes, then fetching data called automatically".
@@ -70,7 +70,7 @@ It also has a navigation host to contain its fragments:
 
 #### Internal Package 
 
-Isolated package contains:
+Separate package contains:
 Glide Module for loading weather icon from the icon URL provided by [visualcrossing API](https://www.visualcrossing.com).
 
 The exceptions file has `NoConnectivityException` that happens in case of No Internet Connection, and `LocationPermissionGrantedException` happens in case of missing permission.
