@@ -1,4 +1,4 @@
-# ForecastApp
+# Forecast App
 ## Forecast is an android application which will help you to track weather forecasts in cities around the world, Based on Kotlin. 
 Forecast app built with MVVM architecture consuming [visualcrossing API](https://www.visualcrossing.com) to show the following:
 - The current weather data of the user location or the desired city like temperature, wind speed, humidity and visibility
