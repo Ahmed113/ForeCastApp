@@ -58,7 +58,7 @@ It also has a navigation host to contain its fragments:
   
 2.`FutureWeatherFragment:` Responsible for displaying the list of the next 7 days' weather forecast.
 
-3.`FutureWeatherDetailsFragment:` Responsible for displaying every single day in the list of the next 7 days' weather forecast.
+3. `FutureWeatherDetailsFragment:` Responsible for displaying weather forecasts in detail for every single day in the list.
 
 4.`SettingsFragment:` lets users interact with the application by entering and selecting data. As shown below in the screenshots
 
