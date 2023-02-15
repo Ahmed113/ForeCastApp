@@ -13,7 +13,7 @@ Forecast app built with MVVM architecture consuming [visualcrossing API](https:/
 ## Architecture and Design
 By going deeper into the application we find it built with MVVM architecture to achieve a more structured code and less tight coupling between components depending on three main layers:
 
-#### Data layer
+#### 1.Data layer
 
 Responsible for getting data from any source, in our case we implemented the remote data source [visualcrossing API](https://www.visualcrossing.com)
 with Retrofit to get weather data and store it in Room Database as shown below:
@@ -34,7 +34,7 @@ The Gson library is responsible for converting Json files to our Java classes
 also gets data from `ForecastDB` Depending on user entries then sends it to the view model layer as Live Data through interface `WeatherRepository`, updates database so if there are changes in data, these changes happen from user "Changes like unit system, user location or the desired city" or the last fetching time "If the last fetching time was from 30 minutes, then fetching data called automatically".
 Considering the asynchronization by coroutines scopes with suspended functions.
 
-#### View Model layer
+#### 2.View Model layer
 
 Responsible for getting data from `Repository` in the Data layer and then sending it to the user interface, in our Forecast app the base view model is `WeatherViewModel` has a parameter from the `WeatherRepository` type so we can get all data we need from `Repository` and two general functions `getWeatherLocation()`, `getDeviceLocationName(latitude, longitude)`.
 its sub-view models:
@@ -47,7 +47,7 @@ its sub-view models:
 
 > **Note:** Every sub-view model is in the same package with its fragment.
 
-#### User Interface (UI)
+#### 3.User Interface (UI)
 
 Screens representing user-visible data in the Forecast app that have 4 fragments with one activity designed using Navigation Components.
 The `MainActivity` is responsible for Managing user location through the class `LifeCycleBoundLocationManager` that was created to keep `MainActivity` clean
